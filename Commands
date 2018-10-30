@@ -1,0 +1,22 @@
+You can see which charts are available by running 
+ 
+## helm search
+ 
+With no filter, helm search shows you all of the available charts. You can narrow down your results by searching with a filter
+
+## helm search jenkins
+
+We can use helm inspect chart to see the detailed information
+
+## helm inspect stable/jenkins
+
+Search is a good way to find available packages. Once you have found a package you want to install, 
+you can use helm install to install it
+
+To install a new package, use the helm install command. At its simplest, it takes only one argument: The name of the chart.
+## helm install stable/jenkins
+
+Now the jenkins chart is installed. Note that installing a chart creates a new release object. The release above is named yellow-owl. (If you want to use your own release name, simply use the --name flag on helm install.
+
+To keep track of a release’s state, or to re-read configuration information, you can use helm status
+## helm stall yellow-owl
