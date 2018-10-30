@@ -1,0 +1,17 @@
+ you can develop own charts by using the helm create command:
+
+## helm create deis-workflow
+
+Now there is a chart in ./deis-workflow. You can edit it and create your own templates.
+
+As you edit your chart, you can validate that it is well-formatted by running helm lint.
+
+When it’s time to package the chart up for distribution, you can run the helm package command:
+
+## helm package deis-workflow
+
+And that chart can now easily be installed by helm install:
+
+## helm install ./deis-workflow-0.1.0.tgz
+
+Charts that are archived can be loaded into chart repositories.
