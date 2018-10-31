@@ -15,3 +15,28 @@ And that chart can now easily be installed by helm install:
 ## helm install ./deis-workflow-0.1.0.tgz
 
 Charts that are archived can be loaded into chart repositories.
+
+Helm has some tooling to create the scaffolding needed to start developing a new Helm Chart. 
+We’ll create it with a placeholder name of helm:
+
+$ helm create helm
+Creating helm
+tree helm
+helm
+├── charts
+├── Chart.yaml
+├── templates
+│   ├── deployment.yaml
+│   ├── _helpers.tpl
+│   ├── ingress.yaml
+│   ├── NOTES.txt
+│   └── service.yaml
+└── values.yaml
+2 directories, 7 files
+Helm will have created a number of files and directories.
+
+Chart.yaml - the metadata for your Helm Chart.
+values.yaml - values that can be used as variables in your templates.
+templates/*.yaml - Example Kubernetes manifests.
+_helpers.tpl - helper functions that can be used inside the templates.
+templates/NOTES.txt - templated notes that are displayed on Chart install.
